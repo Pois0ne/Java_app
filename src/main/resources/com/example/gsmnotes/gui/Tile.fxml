@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml">
+<!--<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">-->
+   <children>
+      <ImageView fx:id="TImage" fitHeight="105.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox prefHeight="104.0" prefWidth="273.0">
+         <children>
+            <Label fx:id="TTitle" prefHeight="36.0" prefWidth="274.0" text="Title">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="TText" prefHeight="36.0" prefWidth="274.0" text="text">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+<!--            <TextArea fx:id="TText" prefHeight="200.0" prefWidth="200.0" text="text" />-->
+         </children>
+      </VBox>
+   </children>
+<!--</HBox>-->
+</fx:root>
