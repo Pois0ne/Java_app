@@ -1,9 +1,8 @@
 package com.example.gsmnotes.gui;
 
-import com.example.gsmnotes.DeviceService;
-import com.example.gsmnotes.HelloApplication;
-import com.example.gsmnotes.gui.DeviceTile;
-import com.example.gsmnotes.entities.Device;
+import com.example.gsmnotes.devices.DeviceService;
+import com.example.gsmnotes.Application;
+import com.example.gsmnotes.devices.Device;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -20,7 +19,7 @@ public class DeviceController implements Initializable {
 
     @FXML
     private ListView deviceListView;
-    DeviceService deviceService = HelloApplication.deviceService;
+    DeviceService deviceService = Application.deviceService;
     public static final ObservableList<Device> devicesList = FXCollections.observableArrayList();
 
     @Override
@@ -81,6 +80,19 @@ public class DeviceController implements Initializable {
 
 
         System.out.println(selectedItem.getName());
+
+        /*
+        TODO: сделать интерфейс, чтобы можно было редактировать отдельные поля!
+        одно большое поле не прокатит!
+
+        у тебя много полей у Девайса, это структурированные данные, которые должна быть возможность
+        просматривать и изменять отдельно
+
+
+        TODO: предлагаю также вместо вкладок использовать одно окно, в котором можно просматривать, так и редактировать поля
+        для этого просто нужно сделать кнопку Редактировать-Сохранить, чтобы текстовые поля стали доступны (setDisabled)
+
+         */
     }
 
 }

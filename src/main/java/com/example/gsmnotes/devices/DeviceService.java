@@ -1,12 +1,9 @@
-package com.example.gsmnotes;
+package com.example.gsmnotes.devices;
 
-import com.example.gsmnotes.entities.Device;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
 
 @Component
 public class DeviceService {
@@ -30,6 +27,10 @@ public class DeviceService {
 
     public Device updateDevice(Device d) {
         return this.repository.save(d);
+    }
+
+    public void clearAllDevices() {
+        this.repository.deleteAll();
     }
 
 

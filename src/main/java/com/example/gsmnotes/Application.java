@@ -1,13 +1,8 @@
 package com.example.gsmnotes;
 
-import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.example.gsmnotes.devices.DeviceService;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
-import javafx.scene.control.cell.ComboBoxListCell;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import java.io.IOException;
 
 @SpringBootApplication
-public class HelloApplication extends javafx.application.Application {
+public class Application extends javafx.application.Application {
 
 
     public static DeviceService deviceService;
@@ -30,12 +25,14 @@ public class HelloApplication extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        context = SpringApplication.run(HelloApplication.class);
+        context = SpringApplication.run(Application.class);
         deviceService = context.getBean(DeviceService.class);
+
+        TestInitializer.fillWithSampleData();
 
         stage.setTitle("GSM.Notes");
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainUi2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("MainUi2.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 800, 400);
         stage.setScene(scene);

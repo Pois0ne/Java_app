@@ -1,4 +1,4 @@
-package com.example.gsmnotes.entities;
+package com.example.gsmnotes.devices;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
